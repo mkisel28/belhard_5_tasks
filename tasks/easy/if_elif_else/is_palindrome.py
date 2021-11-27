@@ -17,15 +17,10 @@
 
 
 def is_palindrome(check_str: str) -> bool:
-    """Проверяет, является ли строка палиндромом
-
-    :param check_str: строка для проверки
-    :type check_str: str
-
-    :return: True - палиндром, False - нет
-    :rtype: bool
-    """
-    result = None
+    if check_str == check_str[::-1]:
+        result = True
+    else:
+        result = False
     return result
 
 

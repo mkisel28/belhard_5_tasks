@@ -12,7 +12,10 @@ n! = 1 * 2 * … * n, где n – это число, а n! – факториа
 
 
 def factorial(n: int) -> int:
-    return None
+    fac = 1
+    for i in range(1, n + 1):
+        fac *= i
+    return fac
 
 
 if __name__ == '__main__':

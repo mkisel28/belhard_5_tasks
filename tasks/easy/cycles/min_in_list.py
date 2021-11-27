@@ -13,9 +13,13 @@ min_in_list([7, 2, 4, 6, 1, 4]) -> 1
 
 
 def min_in_list(some_list: list) -> int:
-    min_value = None
-    # TODO Написать свой код здесь
-    return min_value
+    answer = some_list.pop()
+    for i in some_list:
+        if i < answer:
+            answer = i
+    print(answer)
+    return answer
+    return answer
 
 
 if __name__ == '__main__':
