@@ -19,7 +19,19 @@
 
 
 def selection_sort(array: list) -> list:
-    return array
+    gays = []
+
+    def min_in_list(min_n: list):
+        answer = min_n[-1]
+        for g in min_n:
+            if g < answer:
+                answer = g
+        array.remove(answer)
+        return answer
+    while len(array) > 0:
+        gays.append(min_in_list(array))
+
+    return gays
 
 
 if __name__ == '__main__':

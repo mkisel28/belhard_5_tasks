@@ -10,13 +10,23 @@
 
 
 def common_and_longest(text: str) -> tuple:
-    common = None
-    longest = None
-    return common, longest
+    text = text.split()
+    longeest = text[0]
+    times = 0
+    times_temp = 0
+    z = -1
+    for i in text:
+        if i != text[0]:
+            if (len(i) > len(longeest)):
+                longeest = i
+    for i in text:
+        z += 1
+        if times_temp < text.count(i):
+            times = text[z]
+            times_temp = text.count(i)
+    return times, longeest
 
 
 if __name__ == '__main__':
-    assert common_and_longest(
-        "привет пока ялюблюpython привет"
-    ) == ('привет', 'ялюблюpython')
+    assert common_and_longest("привет пока ялюблюpython привет") == ('привет', 'ялюблюpython')
     print('Решено!')
