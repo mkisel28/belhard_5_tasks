@@ -10,14 +10,14 @@ odd - нечетные
 
 
 def calc_even_odd(array: list) -> tuple:
-    even = []
-    odd = []
+    even = 0
+    odd = 0
     for i in array:
         if i % 2 == 0:
-            even.append(i)
+            even += 1
         else:
-            odd.append(i)
-    return len(even), len(odd)
+            odd += 1
+    return even, odd
 
 
 if __name__ == '__main__':

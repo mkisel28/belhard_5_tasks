@@ -11,15 +11,9 @@ is_unique([2, 1, 5, 4, 2]) -> False
 
 
 def is_unique(array: list) -> bool:
-    unique = []
-    for i in array:
-        if i in unique:
-            continue
-        else:
-            unique.append(i)
-    if len(unique) == len(array):
+    if len(array) == len(set(array)):
         return True
-    else:
+    if len(array) != len(set(array)):
         return False
 
 

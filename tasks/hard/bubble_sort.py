@@ -29,12 +29,13 @@
 
 
 def bubble_sort(array: list) -> list:
-    for i in range(0, len(array) - 1):
-        for z in range(len(array) - 1):
-            if(array[z] > array[z + 1]):
-                n_tmp = array[z]
-                array[z] = array[z + 1]
-                array[z + 1] = n_tmp
+    run = True
+    while run:
+        run = False
+        for i in range(len(array) - 1):
+            if(array[i] > array[i + 1]):
+                array[i], array[i + 1] = array[i + 1], array[i]
+                run = True
     return array
 
 

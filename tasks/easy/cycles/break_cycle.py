@@ -16,12 +16,17 @@ lets_break(20) -> ValueError
 
 
 def lets_break(n: int) -> int:
-    cou = 0
     if n > 10:
         raise ValueError("Начальное значение больше 10")
-    for i in range(n, 10):
-        cou += 1
-    return cou
+    current_value = n
+    counter = 0
+    while True:
+        counter += 1
+        current_value += 1
+        print(counter)
+        if current_value == 10:
+            break
+    return counter
 
 
 if __name__ == '__main__':

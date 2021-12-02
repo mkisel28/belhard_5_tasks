@@ -19,7 +19,7 @@ def odd_sum(int_list: list) -> int:
             if i % 2 == 1:
                 k = k + i
         else:
-            raise TypeError()
+            raise TypeError("Все элементы списка должны быть целыми числами")
     return k
 
 
@@ -29,7 +29,6 @@ if __name__ == '__main__':
         odd_sum(some_list)
     except TypeError as exc:
         print(exc)
-        print("Все элементы списка должны быть целыми числами")
     except ValueError as exc:
         print(exc)
         print("Все элементы списка должны быть целыми ")

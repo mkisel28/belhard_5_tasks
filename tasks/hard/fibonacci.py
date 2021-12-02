@@ -29,12 +29,11 @@ def fibonacci(n: int) -> int:
     if n > 2:
         fib1 = 1
         fib2 = 1
-        fib_sum = 0
         while n > 2:
             n -= 1
             fib_sum = fib1 + fib2
+            fib1 = fib2
             fib2 = fib_sum
-            fib1 = fib_sum - fib1
         return fib_sum
     else:
         fib2 = 1
