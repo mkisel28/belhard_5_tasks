@@ -40,21 +40,19 @@ var2 = (-b - кв.корень(d))/2a
 
 
 def resolve_equation(a: float, b: float, c: float) -> tuple:
-    """Решает квадратное уравнение, возвращает дискриминант и корни уравнения
-
-    d - дискриминант
-    n_var - количество корней
-    var1 - первый корень
-    var2 - второй корень
-
-    :return: tuple(значение дискриминанта, количество корней,
-     первый корень, второй корень)
-    :rtype: tuple
-    """
-    d = None
-    n_var = None
-    var1 = None
-    var2 = None
+    d = ((b ** 2) - (4 * a * c))
+    if d == 0:
+        n_var = 1
+        var1 = (- b + d ** 0.5) / 2 * a
+        var2 = None
+    if d > 0:
+        n_var = 2
+        var2 = (-b - d ** 0.5) / 2 * a
+        var1 = (-b + d ** 0.5) / 2 * a
+    if d < 0:
+        n_var = None
+        var1 = None
+        var2 = None
     return d, n_var, var1, var2
 
 

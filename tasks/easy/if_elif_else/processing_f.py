@@ -19,16 +19,16 @@ from typing import Union
 
 
 def processing_f(str_with_f: str) -> Union[int, str]:
-    """Выполняет действия в зависимости от количества вхождений f
+    times = str_with_f.count("f")
+    if times == 0:
+        return str_with_f.swapcase()
+    if times == 1:
+        return str_with_f.index("f")
+    if times == 2:
+        return str_with_f.rindex("f")
+    else:
+        return str_with_f[::-1]
 
-    :param str_with_f: строка для работы
-    :type str_with_f: str
-
-    :return: строку или индекс
-    :rtype: str
-    """
-    result = None
-    return result
 
 
 if __name__ == '__main__':

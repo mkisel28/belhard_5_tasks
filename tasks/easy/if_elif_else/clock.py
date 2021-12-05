@@ -29,22 +29,14 @@ from typing import Union
 
 
 def get_seconds(h: int, m: int, s: int) -> Union[int, str]:
-    """Возвращает количество секунд от 00:00:00 в зависимости от переданного
-    времени на электронных часах
 
-    :param h: часы
-    :type h: int
-
-    :param m: минуты
-    :type m: int
-
-    :param s: секунды
-    :type s: int
-
-    :return: количество сеекунд от 00:00:00
-    :rtype: int
-    """
-    result = None
+    result = h * 3600 + m * 60 + s
+    if h > 23:
+        return ("Ошибка. Допустимое значение для часов 0..23")
+    if m > 60:
+        return ("Ошибка. Допустимое значение для минут 0..59")
+    if (s > 60 or s < 0):
+        return ("Ошибка. Допустимое значение для секунд 0..59")
     return result
 
 

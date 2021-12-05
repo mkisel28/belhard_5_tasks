@@ -19,11 +19,18 @@ what_you_drink(18) == "можно пиво"
 what_you_drink(20) == "можно пиво"
 what_you_drink(30) == "можно виски"
 """
+a = {1: "qw1", 2: "qw2", 3: "qw3", 4: "qw4", 5: "qw6"}
 
 
 def what_you_drink(age: int) -> str:
-    result = None
-    return result
+    if age < 14:
+        return "можно сок"
+    if age < 18:
+        return "можно кока-колу"
+    if age >= 18 and age < 21:
+        return "можно пиво"
+    else:
+        return "можно виски"
 
 
 if __name__ == '__main__':
