@@ -21,16 +21,16 @@ def lets_break(n: int) -> int:
     current_value = n
     counter = 0
     while True:
-        counter += 1
-        current_value += 1
-        print(counter)
         if current_value == 10:
             break
+        else:
+            counter += 1
+            current_value += 1
     return counter
 
 
 if __name__ == '__main__':
-    assert lets_break(1) == 9
+    assert lets_break(10) == 0
     assert lets_break(5) == 5
     assert lets_break(-20) == 30
     print('Решено!')
